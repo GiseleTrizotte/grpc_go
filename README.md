@@ -1,12 +1,28 @@
-go run cmd/grpcServer/main.go 
+<h3 align="center">Back-end gRPC em GoLang</h3>
 
-evans -r repl
-package pb 
-service CategoryService
+<p align="center">“Software developers are students forever 🧠”</p>
 
-Criando banco com sqlite3:
-sqlite3 db.sqlite
-create table categories ( id string, name string, description string);
 
-export PATH=$PATH:$(go env GOPATH)/bin 
-protoc --go_out=. --go-grpc_out=. proto/course_category.proto
+## :warning: Instalação <a name="install"></a>
+
+```bash
+# Criar banco sqlite:
+$ sqlite3 db.sqlite
+
+# Criando tabela categories:
+$ create table categories ( id string, name string, description string);
+
+# development
+$ go run cmd/grpcServer/main.go
+
+# Acessando como client com o pacote Evans
+$ evans -r repl
+$ package pb 
+$ service CategoryService
+$ call <service>
+```
+
+---
+
+by [Gisele Trizotte](https://www.github.com/GiseleTrizotte) ❤️
+
